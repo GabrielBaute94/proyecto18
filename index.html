@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Proyecto18- Vue.js</title>
+
+    <!-- CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- CSS Propio -->
+    <link rel="stylesheet" href="css/ejer2.css">
+
+</head>
+
+<body>
+
+
+    <div id="app" class="container">
+        <div class="row">
+
+            <div class="col-md-7">
+                <div id="content">
+                    <h1 v-bind:style="{ color: title.color, fontSize: title.size + 'px' }">
+                        {{ title.text }}
+                    </h1>
+                    <p>
+                        {{ content }}
+                    </p>
+                </div><!-- /#content -->
+            </div><!-- /.col -->
+
+            <div class="col-md-5">
+                <div id="sidebar">
+                    <h2>Menú de Edición</h2>
+
+                    <form class="" action="index.html" method="post">
+
+                        <div class="form-group">
+                            <label for="title">Título</label>
+                            <input type="text" class="form-control" id="title" name="title" placeholder="Escribir un título..." v-model="title.text">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="paragraph">Párrafo</label>
+                            <textarea class="form-control" rows="5" id="paragraph" name="paragraph" placeholder="Escribir un párrafo..." v-model="content"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fontsize">Tamaño del título (en px)</label>
+                            <input type="text" class="form-control" id="fontsize" name="fontsize" placeholder="Escribir un número..." v-model="title.size" maxlength="2">
+                        </div>
+
+                        <p>
+                            <strong>Color del título</strong>
+                        </p>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="title_color" id="title_color_1" v-model="title.color" value="#F44336">
+                                Rojo
+                            </label>
+                        </div><!-- /.radio -->
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="title_color" id="title_color_2" v-model="title.color" value="#4CAF50">
+                                Verde
+                            </label>
+                        </div><!-- /.radio -->
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="title_color" id="title_color_3" v-model="title.color" value="#2196F3">
+                                Azul
+                            </label>
+                        </div><!-- /.radio -->
+
+                    </form>
+                </div><!-- /#sidebar -->
+            </div><!-- /.col -->
+
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- JS de Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <!-- JS de Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- JS de Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <!-- JS Propio -->
+    <script src="js/ejer2.js"> </script>
+
+</body>
+
+</html>
